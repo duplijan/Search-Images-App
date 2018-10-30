@@ -1,24 +1,18 @@
-import React, { Component } from 'react';
-//import ImageSearch from './components/ImageSearch';
+import React from 'react';
 
-class Result extends React {
-  render(){
-      const displayResult =
-      this.props.results.map( image => {
-        return (
-          <div key={image.id} className='galleryGrid-image'>
-            <img src={image.largeImageURL} alt={image.title}> </img>
-            <div>
-              <p>{image.tags}</p>
-            </div>
-          </div>
-        )
-      })
-
+const Result = (props) => {
+  return(
+    props.images.map( image => {
       return (
-        {displayResult}
+        <div key={image.id} className='galleryGrid-image'>
+          <img src={image.largeImageURL} alt={image.title} />
+          <div>
+            <p>@Credit:{image.user}</p>
+          </div>
+        </div>
       )
-    }
+    })
+  )
 }
 
 export default Result;
