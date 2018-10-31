@@ -1,13 +1,18 @@
 import React, { Component  } from 'react';
 import './App.css';
 import ImageSearch from './ImageSearch';
+import Navbar from './Navbar';
+import Header from './Header';
+
+
 
 class App extends Component  {
   render() {
     return (
       <div className="App">
-        <h1>Search App</h1>
-          <ImageSearch />
+        <Navbar />
+        <Header />
+        <ImageSearch />
       </div>
     );
   }
